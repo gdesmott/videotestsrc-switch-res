@@ -92,7 +92,7 @@ main (gint argc, gchar ** argv)
 
   pipeline =
       gst_parse_launch
-      ("videotestsrc name=src ! capsfilter name=cf ! omxh264enc ! queue ! glimagesink",
+      ("videotestsrc name=src ! capsfilter name=cf ! omxh264enc ! fakesink",
       NULL);
   src = gst_bin_get_by_name (GST_BIN (pipeline), "src");
   capsfilter = gst_bin_get_by_name (GST_BIN (pipeline), "cf");
