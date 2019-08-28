@@ -28,9 +28,9 @@ static GstElement *pipeline;
 static GstElement *src, *capsfilter;
 
 static const gchar *caps_array[] = {
-  "video/x-raw, width=(int)320, height=(int)240",
-  "video/x-raw, width=(int)1280, height=(int)720",
-  "video/x-raw, width=(int)640, height=(int)480"
+  "video/x-raw, format=NV12, width=(int)320, height=(int)240, colorimetry=bt709",
+  "video/x-raw, format=NV12, width=(int)1280, height=(int)720, colorimetry=bt709",
+  "video/x-raw, format=NV12, width=(int)640, height=(int)480, colorimetry=bt709",
 };
 
 #define CAPS_COUNT 3
