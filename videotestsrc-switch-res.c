@@ -28,9 +28,8 @@ static GstElement *pipeline;
 static GstElement *src, *capsfilter;
 
 static const gchar *caps_array[] = {
-  "video/x-raw, format=NV12, width=(int)320, height=(int)240, colorimetry=bt709",
-  "video/x-raw, format=NV12, width=(int)1280, height=(int)720, colorimetry=bt709",
-  "video/x-raw, format=NV12, width=(int)640, height=(int)480, colorimetry=bt709",
+  "video/x-raw, format=NV12, width=(int)3840, height=(int)2160, colorimetry=bt709",
+  "video/x-raw, format=NV12, width=(int)1920, height=(int)1080, colorimetry=bt709",
 };
 
 static gint caps_index = 0;
