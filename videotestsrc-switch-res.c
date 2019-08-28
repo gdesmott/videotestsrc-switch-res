@@ -96,6 +96,7 @@ main (gint argc, gchar ** argv)
       NULL);
   src = gst_bin_get_by_name (GST_BIN (pipeline), "src");
   capsfilter = gst_bin_get_by_name (GST_BIN (pipeline), "cf");
+  change_caps (NULL);
 
   bus = gst_pipeline_get_bus (GST_PIPELINE (pipeline));
   gst_bus_add_watch (bus, bus_callback, NULL);
