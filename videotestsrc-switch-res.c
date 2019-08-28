@@ -33,7 +33,6 @@ static const gchar *caps_array[] = {
   "video/x-raw, format=NV12, width=(int)640, height=(int)480, colorimetry=bt709",
 };
 
-#define CAPS_COUNT 3
 static gint caps_index = 0;
 
 static gboolean
@@ -66,7 +65,7 @@ change_caps (gpointer data)
 {
   GstCaps *caps;
 
-  if (caps_index >= CAPS_COUNT) {
+  if (caps_index >= G_N_ELEMENTS (caps_array)) {
     gst_element_send_event (pipeline, gst_event_new_eos ());
     return FALSE;
   }
